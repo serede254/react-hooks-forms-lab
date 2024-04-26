@@ -6,15 +6,15 @@ function ItemForm({ onItemFormSubmit }) {
     const [itemCategory, setItemCategory] = useState('Produce');
 
     const handleSubmit = (event) => {
-        event.preventDefault();  // Prevent form from causing a page reload
+        event.preventDefault();  
         const newItem = {
             id: uuid(),
             name: itemName,
             category: itemCategory,
         };
         onItemFormSubmit(newItem);
-        setItemName('');        // Reset name for next input
-        setItemCategory('Produce'); // Reset category to default for next input
+        setItemName('');        
+        setItemCategory('Produce'); 
     };
 
     return (
